@@ -16,5 +16,17 @@ namespace ExamKakaoTalk
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(btnLogin.Text == "로그인")
+            {
+                FormKakaoLogin form = new FormKakaoLogin();
+                if(form.ShowDialog() == DialogResult.OK)
+                {
+                    btnLogin.Text = "로그아웃";
+                }
+            }
+        }
     }
 }
