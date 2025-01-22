@@ -29,33 +29,38 @@ namespace ExamKakaoTalk
         /// </summary>
         private void InitializeComponent()
         {
-            this.webBrowserKakaoLogin = new System.Windows.Forms.WebBrowser();
+            this.webViewKakaoLogin = new Microsoft.Web.WebView2.WinForms.WebView2();
+            ((System.ComponentModel.ISupportInitialize)(this.webViewKakaoLogin)).BeginInit();
             this.SuspendLayout();
             // 
-            // webBrowserKakaoLogin
+            // webViewKakaoLogin
             // 
-            this.webBrowserKakaoLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowserKakaoLogin.Location = new System.Drawing.Point(0, 0);
-            this.webBrowserKakaoLogin.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowserKakaoLogin.Name = "webBrowserKakaoLogin";
-            this.webBrowserKakaoLogin.Size = new System.Drawing.Size(450, 450);
-            this.webBrowserKakaoLogin.TabIndex = 0;
-            this.webBrowserKakaoLogin.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowserKakaoLogin_DocumentCompleted);
+            this.webViewKakaoLogin.AllowExternalDrop = true;
+            this.webViewKakaoLogin.CreationProperties = null;
+            this.webViewKakaoLogin.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webViewKakaoLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webViewKakaoLogin.Location = new System.Drawing.Point(0, 0);
+            this.webViewKakaoLogin.Name = "webViewKakaoLogin";
+            this.webViewKakaoLogin.Size = new System.Drawing.Size(450, 450);
+            this.webViewKakaoLogin.TabIndex = 0;
+            this.webViewKakaoLogin.ZoomFactor = 1D;
+            this.webViewKakaoLogin.NavigationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs>(this.webViewKakaoLogin_NavigationCompleted);
             // 
             // FormKakaoLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 450);
-            this.Controls.Add(this.webBrowserKakaoLogin);
+            this.Controls.Add(this.webViewKakaoLogin);
             this.Name = "FormKakaoLogin";
             this.Text = "FormKakaoLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.webViewKakaoLogin)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser webBrowserKakaoLogin;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webViewKakaoLogin;
     }
 }

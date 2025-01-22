@@ -16,9 +16,12 @@ namespace ExamKakaoTalk
         // 사용자 에플리케이션 아이디
         public const string USER_ID = "1190775";
         // Redirect URL
-        public const string REDIRECT_URL = "https://blog.naver.com/ttkdenddl11/oauth";
+        public const string REDIRECT_URL = "https://www.naver.com/oauth";
+        //public const string REDIRECT_URL = "http://localhost:8080/oauth";
+
 
         //Login Request URL: https://kauth.kakao.com/oauth/authorize?response_type=code&client_id={REST_API_KEY}&redirect_uri={REDIRECT_URI}
+        //public const string LOGIN_URL = "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=" + API_KEY + "&redirect_uri=" + REDIRECT_URL;
         public const string LOGIN_URL = "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=" + API_KEY + "&redirect_uri=" + REDIRECT_URL;
 
         public const string HOST_OAUTH_URL = "https://kauth.kakao.com";
